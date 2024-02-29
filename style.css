@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    background: #ffd9b3;
+    min-width: 375px;
+    max-width: 425px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 85vh 100vh 100vh 100vh 25rem;
+    grid-template-areas: 
+    'nav nav nav'
+    'banner banner banner'
+    'content1 content1 content1'
+    'content2 content2 content2'
+    'content3 content3 content3'
+    'message message message'
+    ;
+    overflow: hidden;
+}
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav h2{
+    font-weight: 600;
+    font-size: 20px;
+    color: transparent;
+    -webkit-text-stroke: 1px #663300;
+    animation: slide 3s ease infinite;
+    transform: translateX(-150%);
+    opacity: 0;
+}
+@keyframes slide{
+    50%{transform: translateX(0%); opacity: 1;}
+    100%{transform: translateX(150%); opacity: 0;}
+}
+.banner{
+    grid-area: banner;
+}
+.content1{
+    grid-area: content1;
+}
+.content2{
+    grid-area: content2;
+}
+.content3{
+    grid-area: content3;
+}
+.message{
+    grid-area: message;
+}
